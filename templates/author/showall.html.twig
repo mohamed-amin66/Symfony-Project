@@ -1,0 +1,16 @@
+<center>
+<table border = 1>
+    <tr>
+        <td>Username</td>
+        <td>Email</td>
+        <td>Action</td>
+    <tr>
+    {% for i in authors %}
+    <tr>
+        <td>{{ i.username }}</td>
+        <td>{{ i.email }}</td>
+        <td><a href="delete">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
