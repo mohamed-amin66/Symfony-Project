@@ -12,11 +12,13 @@ final class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController', 'identifiant' => 5
+            'controller_name' => 'HomeController','identifiant'=>5
         ]);
     }
-    #[Route('/hello/{id}', name: 'hello_message')]
-    public function Hello($id){
-        return new Response("Hello 3A25 ".$id);
+
+    #[Route('/hello/{id}',name:'hello')]
+    public function hello($id){
+        // return new Response("Hello 3A25".$id);
+        return $this->render('home/index.html.twig',['identifiant'=>$id]); 
     }
 }
